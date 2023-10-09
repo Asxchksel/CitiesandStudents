@@ -1,29 +1,28 @@
 public class Student {
-    private String buddy;
+    private Student buddy;
     private Cities hometown;
     private String name;
-    private int stundentID;
+    private int studentID;
 
     public Student(String name, int stundentID){
         this.name = name;
-        this.stundentID = stundentID;
+        this.studentID = stundentID;
     }
-/*
-    public String reportBuddyName(String name){
-        this.name = buddy;
-        return buddy;
+
+    public String reportBuddyName(){
+        return buddy.getName();
     }
 
     public Student getBuddy() {
         return buddy;
-    }*/
+    }
 
     public Cities getHometown() {
         return hometown;
     }
 
     public int getStundentID() {
-        return stundentID;
+        return studentID;
     }
 
     public String getName() {
@@ -39,6 +38,10 @@ public class Student {
     }
 
     public void setStundentID(int stundentID) {
-        this.stundentID = stundentID;
+        this.studentID = stundentID;
+    }
+
+    public void setBuddy(Student buddy) {
+        this.buddy = buddy;
     }
 }
