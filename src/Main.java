@@ -1,22 +1,41 @@
+/*TODO:
+ - Major
+ - Vilka studenter i vilken stad
+ - Skolor för stundetner i samma stad
+ -
+ */
+
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Student Student = new Student("Axel", 42069);
-        Student Student2 = new Student("Sebastian", 14000);
-        Student Student3 = new Student("Loke", 21100);
-        Student Student4 = new Student("Tobias", 15000);
+        Student student1 = new Student("Axel", 42069);
+        Student student2 = new Student("Sebastian", 14000);
+        Student student3 = new Student("Loke", 21100);
+        Student student4 = new Student("Jennifer", 15000);
 
-        Cities City1 = new Cities("Stockholm", "Sweden");
-        Cities City2 = new Cities("Helsinki", "Finlandia");
-        Student.setHometown(City1);
-        Student2.setHometown(City1);
-        Student3.setHometown(City2);
-        Student4.setHometown(City2);
+        City city1 = new City("Stockholm", "Sweden");
+        City city2 = new City("Helsinki", "Finlandia");
 
-        Student.setBuddy(Student2);
+        student1.setHometown(city1);
+        city1.addStudentToTown(student1);
 
-        Student.reportBuddyName();
-        System.out.println(Student.reportBuddyName());
+        student2.setHometown(city1);
+        //city1.addStudentToTown(student2);
+
+        student3.setHometown(city2);
+        //city2.addStudentToTown(student3);
+
+        student4.setHometown(city2);
+        //city2.addStudentToTown(student4);
+
+        student1.setBuddy(student2);
+
+        city1.getStudentsFromTown();
+        System.out.println(city1.getStudentsFromTown());
+
+        student1.reportBuddyName();
+        System.out.println(student1.reportBuddyName());
 
     }
 

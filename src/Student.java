@@ -1,6 +1,8 @@
+import java.util.ArrayList;
+
 public class Student {
     private Student buddy;
-    private Cities hometown;
+    private City hometown;
     private String name;
     private int studentID;
 
@@ -17,7 +19,8 @@ public class Student {
         return buddy;
     }
 
-    public Cities getHometown() {
+
+    public City getHometown() {
         return hometown;
     }
 
@@ -33,7 +36,7 @@ public class Student {
         this.name = name;
     }
 
-    public void setHometown(Cities hometown) {
+    public void setHometown(City hometown) {
         this.hometown = hometown;
     }
 
