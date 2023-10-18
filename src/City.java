@@ -23,7 +23,6 @@ public class City {
     public void addStudentToTown(Student student){
         this.studentsFromTown = studentsFromTown;
         studentsFromTown.add(student);
-
     }
 
     public void setStudentsFromTown(ArrayList<Student> studentsFromTown) {

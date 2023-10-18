@@ -19,7 +19,6 @@ public class Student {
         return buddy;
     }
 
-
     public City getHometown() {
         return hometown;
     }
@@ -38,6 +37,7 @@ public class Student {
 
     public void setHometown(City hometown) {
         this.hometown = hometown;
+        hometown.addStudentToTown(this);
     }
 
     public void setStundentID(int stundentID) {
@@ -46,5 +46,6 @@ public class Student {
 
     public void setBuddy(Student buddy) {
         this.buddy = buddy;
+        buddy.setBuddy(this);
     }
 }
