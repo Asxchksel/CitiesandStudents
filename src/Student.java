@@ -46,6 +46,7 @@ public class Student {
 
     public void setBuddy(Student buddy) {
         this.buddy = buddy;
-        buddy.setBuddy(this);
+        if(this.buddy.getBuddy()!= this){
+        buddy.setBuddy(this);}
     }
 }
